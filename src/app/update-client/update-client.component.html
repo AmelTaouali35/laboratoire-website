@@ -1,0 +1,76 @@
+<div class="back">
+  <div class="wrapper">
+    <div class="main-content">
+      <nav class="navbar">
+        <ul>
+          <li><a routerLink="/Home">Accueil</a></li>
+          <li><a routerLink="/clients">Liste des utilisateurs</a></li>
+          <li><a routerLink="/signup">nouveaux utilisateur</a></li>
+          <li><a routerLink="/laboratoire">nouveaux laboratoire</a></li>
+          <li><a routerLink="/signup">liste des laboratoires</a></li>
+          <li><a routerLink="/signup">nouveaux produits</a></li>
+          <li><a routerLink="/signup">liste des produits</a></li>
+        </ul>
+        <button class="logout-btn" (click)="logout()">Déconnexion</button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="background">
+  <div class="container">
+    <div class="formulaire">
+      <h4 class="text-center">Update Account</h4>
+    </div>
+    <div class="mo">
+      <div class="col-md-6">
+        <div class="title">
+          <form class="formulaire" (submit)="updateAccount()">
+            <div class="form-group">
+              <input
+                class="form-control with-icon icon1"
+                id="name"
+                [(ngModel)]="userId"
+                name="name"
+                type="text"
+                placeholder="Name"
+                required
+              />
+              <div
+                *ngIf="userId.invalid && (userId.dirty || userId.touched)"
+                class="text-danger"
+              >
+                <div *ngIf="userId.errors.required">Name is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control with-icon icon2"
+                id="address"
+                [(ngModel)]="address"
+                name="address"
+                required
+                placeholder="password"
+              />
+            </div>
+            <div class="form-group">
+              <select
+                class="form-control with-icon icon3"
+                id="role"
+                [(ngModel)]="role"
+                name="role"
+                required
+              >
+                <option value="admin">Admin</option>
+                <option value="responsable">Responsable Medicis</option>
+              </select>
+            </div>
+
+            <button type="submit">Mise à jour</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

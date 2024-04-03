@@ -1,0 +1,98 @@
+.back {
+  background-color: whitesmoke;
+  padding-left: 70px;
+  padding-right: 70px;/* Couleur de fond sombre pour le mode sombre */
+}
+
+
+.main-content {
+  flex: 1;
+  background-color:whitesmoke; /* Couleur de fond sombre pour le contenu principal */
+  color: #2F4558; /* Couleur du texte dans le contenu principal */
+}
+
+
+/* Styles pour le tableau */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #fff; /* Lignes de tableau blanches */
+}
+
+th {
+  background-color: #2F4558; /* Couleur de fond pour les en-têtes de tableau */
+  color: #fff; /* Couleur du texte des en-têtes de tableau */
+}
+
+tr:nth-child(even) {
+  background-color: #2F4558; /* Couleur de fond pour les lignes de tableau paires */
+}
+
+tr:hover {
+  background-color: #2F4558; /* Couleur de fond au survol des lignes de tableau */
+}
+
+
+
+
+
+/* header design*/
+
+.navbar {
+    background-color: #0078B8;
+    border-radius: 4px;
+    box-shadow: 0 1px 20px 0 #14203E;
+    padding: 0.5rem 1rem;
+    display: flex;
+    height: 60px;
+    align-items: center; /* Centrer verticalement les éléments dans la navbar */
+  }
+
+  .navbar ul {
+    flex-grow: 1; /* Fait en sorte que la liste prenne tout l'espace disponible */
+    display: flex;
+    justify-content: center; /* Centrer horizontalement les éléments dans la liste */
+  }
+
+  .navbar ul li {
+    margin: 0 10px; /* Ajoute un espace autour de chaque élément de liste */
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li a {
+    color: rgba(245, 245, 245, 0.842);
+    text-decoration: none;
+  }
+
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .wrapper .navbar-icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .logout-btn {
+    background-color: whitesmoke;
+    color: #0078B8;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+
+  }

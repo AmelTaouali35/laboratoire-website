@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <div class="main-content">
+    <nav class="navbar">
+      <ul>
+        <li><a routerLink="/Home">Accueil</a></li>
+        <li><a routerLink="/clients">Liste des utilisateurs</a></li>
+        <li><a routerLink="/signup">nouveaux utilisateur</a></li>
+        <li><a routerLink="/laboratoire">nouveaux laboratoire</a></li>
+        <li><a routerLink="/signup">liste des laboratoires</a></li>
+        <li><a routerLink="/signup">nouveaux produits</a></li>
+        <li><a routerLink="/signup">liste des produits</a></li>
+      </ul>
+      <button class="logout-btn" (click)="logout()">Déconnexion</button>
+    </nav>
+  </div>
+</div>
+
+<div class="back">
+  <div class="table-users">
+    <table cellspacing="0">
+      <tr>
+        <th>Name</th>
+        <th>password</th>
+        <th>Role</th>
+        <th>Action</th>
+      </tr>
+
+      <tbody>
+        <tr *ngFor="let client of clients">
+          <td>{{ client.userId }}</td>
+          <td>{{ client.password }}</td>
+          <td>{{ client.role }}</td>
+          <td>
+            <button (click)="updateClient(client.userId)" class="btn btn-info">
+              Update
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

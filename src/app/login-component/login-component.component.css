@@ -1,0 +1,91 @@
+.background {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("src/assets/Dashboard Login.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-control.with-icon.icon1 {
+  background-image: url('src/assets/user.png');
+  background-size: 20px 20px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+.form-control.with-icon.icon2 {
+  background-image: url('src/assets/bloc.png');
+  background-size: 20px 18px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+.container {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #232836;
+  text-align: center;
+}
+
+.form-group {
+  margin-top: 30px;
+}
+
+.form__field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+
+.form-control {
+  height: 80%;
+  width: 200%;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  border: 1px solid #cacaca;
+  margin-left: 20px;
+}
+
+button {
+  color: #fff;
+  background-color: #0078B8;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 60px;
+  margin-left: 140px;
+}
+
+button:hover {
+  background-color: #0078B8;
+}
+
+.text-center {
+  text-align: center;
+  margin-left: 110px;
+}
+input{outline: none;
+  padding: 0 15px;
+  border: 1px solid#CACACA;}

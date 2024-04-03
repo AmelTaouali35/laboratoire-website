@@ -1,0 +1,180 @@
+
+:host {
+  background-color: #EBF2FA;
+  background-image: url("src/assets/Dashboard Login.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;/* Correction de la syntaxe de l'image de fond */
+  display: block; /* Assure que l'élément racine du composant est affiché en tant que bloc */
+  min-height: 100vh; /* Assure que le composant occupe au moins la hauteur de l'écran */
+}
+
+.container {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  padding: 30px;
+  margin-top: 50px;
+  border-radius: 6px;
+  background: #fff;
+}
+
+
+.form-group {
+  margin-top: 30px;
+}
+
+.form__field {
+  position: relative;
+  height: 35px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+
+.form-control {
+  height: 80%;
+  width: 200%;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  border: 1px solid #cacaca;
+  margin-left: 20px;
+}
+
+button {
+  color: #fff;
+  background-color: #0078B8;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 60px;
+  margin-left: 140px;
+}
+
+button:hover {
+  background-color: #0078B8;
+}
+
+.formulaire {
+  font-size: 28px;
+  font-weight: 600;
+  color: #232836;
+  text-align: center;
+  display: inline;
+}
+input{outline: none;
+  padding: 0 15px;
+  border: 1px solid#CACACA;}
+  .form-control.with-icon.icon1 {
+    background-image: url('src/assets/user.png');
+    background-size: 20px 20px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+  }
+
+  .form-control.with-icon.icon2 {
+    background-image: url('src/assets/bloc.png');
+    background-size: 20px 18px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+  }
+
+  .form-control.with-icon.icon3 {
+    background-image: url('src/assets/vers.png');
+
+    background-size: 20px 20px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+  }
+
+
+
+  /* Define styles for success and error messages */
+  .success-message {
+    color: green; /* Couleur du texte en vert */
+    background-color: rgba(255, 235, 205, 0.5); /* Couleur de fond beige avec une transparence de 50% */
+    border: 2px solid green; /* Bordure plus épaisse de couleur verte */
+    font-size: 18px; /* Taille de police augmentée à 18px */
+    font-family: cursive;      margin-top: 10px;
+    margin-left: 500px;
+    margin-right: 500px;
+    text-align: center;
+  }
+
+
+.error-message {
+  color: red;
+  background-color: rgba(255, 235, 205, 0.5); /* Couleur de fond beige avec une transparence de 50% */
+  border: 2px solid red; /* Bordure plus épaisse de couleur verte */
+  font-family: cursive;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+
+}
+
+  /*header*/
+  .navbar {
+    background-color: #0078B8;
+    width: 99%;
+    border-radius: 4px;
+    box-shadow: 0 1px 20px 0 #14203E;
+    padding-right: 150px;
+    display: flex;
+    align-items: center;/* Centrer verticalement les éléments dans la navbar */
+  }
+
+  .navbar ul {
+    flex-grow: 1; /* Fait en sorte que la liste prenne tout l'espace disponible */
+    display: flex;
+    justify-content: center; /* Centrer horizontalement les éléments dans la liste */
+  }
+
+  .navbar ul li {
+    margin: 0 10px; /* Ajoute un espace autour de chaque élément de liste */
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: -20px;
+  }
+
+  li a {
+    color: rgba(245, 245, 245, 0.842);
+    text-decoration: none;
+  }
+
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .wrapper .navbar-icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .logout-btn {
+    background-color: whitesmoke;
+    color: #0078B8;
+    border: none;
+margin-top: -50px;
+margin-left: 1090px;
+    border-radius: 5px;
+    cursor: pointer;
+  }

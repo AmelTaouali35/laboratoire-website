@@ -1,0 +1,96 @@
+<div class="back">
+  <div class="wrapper">
+    <nav class="sidebar">
+      <div class="logo"></div>
+    </nav>
+    <div class="main-content">
+      <nav class="navbar">
+        <div class="navbar-icon">
+          <!-- Icône du compte -->
+        </div>
+        <ul>
+          <li><a routerLink="/Home">Home</a></li>
+          <li><a routerLink="/clients">Client List</a></li>
+          <li><a routerLink="/signup">Create new account</a></li>
+        </ul>
+        <button class="logout-btn">Logout</button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="containe">
+  <!-- Your form content -->
+
+  <!-- Success message -->
+  <div *ngIf="successMessage" class="success-message">
+    {{ successMessage }}
+  </div>
+
+  <!-- Error message -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</div>
+
+<div class="container">
+  <div class="formulaire">
+    <h4>Create new account</h4>
+  </div>
+  <form class="form-group" (submit)="createAccount()">
+    <div class="form-group">
+      <div class="col-md-6">
+        <div class="form__field">
+          <input
+            type="text"
+            class="form-control with-icon icon1"
+            id="name"
+            [(ngModel)]="userId"
+            name="userId"
+            placeholder="Name"
+            required
+          />
+          <div
+            *ngIf="userId.invalid && (userId.dirty || userId.touched)"
+            class="text-danger"
+          >
+            <div *ngIf="userId.errors.required">Name is required</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <div class="form__field">
+          <input
+            type="text"
+            class="form-control with-icon icon2"
+            id="password"
+            [(ngModel)]="password"
+            name="password"
+            placeholder="password"
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <div class="form__field">
+          <select
+            class="form-control with-icon icon3"
+            id="role"
+            [(ngModel)]="role"
+            name="role"
+            required
+          >
+            <option value="admin">Administrateur</option>
+            <option value="client">Client</option>
+            <option value="responsable">Responsable Médical</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+</div>
