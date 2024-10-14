@@ -1,0 +1,47 @@
+<body style="background-color: #f6f5f2">
+  <div class="component">
+    <!-- Page Wrapper -->
+
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <!-- Sidebar -->
+      <app-sidebar></app-sidebar>
+
+      <!-- End of Sidebar -->
+      <div class="col-lg-10 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body" style="padding-top: 20px">
+            <h4 class="card-title" style="margin-bottom: -23px">
+              Laboratoires
+            </h4>
+            <div class="table-responsive">
+              <table class="table table-striped" style="width: auto">
+                <!-- Set table width to auto -->
+                <div class="back">
+                  <div class="table-users">
+                    <table cellspacing="0">
+                      <tr>
+                        <th style="width: 5%">Code</th>
+                        <th style="width: 5%">Libelle</th>
+                        <!-- Add other table headers as needed -->
+                      </tr>
+
+                      <tbody>
+                        <tr *ngFor="let product of products">
+                          <td>{{ product.code }}</td>
+                          <td>{{ product.libelle }}</td>
+                          <td>{{ product.stockresoff }}</td>
+                          <!-- Ajoutez les autres colonnes nécessaires -->
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

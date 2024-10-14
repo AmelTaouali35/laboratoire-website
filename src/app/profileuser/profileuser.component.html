@@ -1,0 +1,36 @@
+<body>
+  <div class="component">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <app-sidebar></app-sidebar>
+      <!-- End of Sidebar -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <app-header></app-header>
+          <!-- Content Wrapper -->
+          <div class="keep">
+            <div class="wrapper">
+              <h2>Mon Compte</h2>
+              <div class="input-box">
+                <div *ngIf="user">
+                  <label for="email">E-mail:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    [(ngModel)]="user.email"
+                    class="form-control"
+                    placeholder="email@gmail.com"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Code</th>
+      <th>Libelle</th>
+      <!-- Add other table headers as needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{ customer.id }}</td>
+      <td>{{ customer.code }}</td>
+      <td>{{ customer.libelle }}</td>
+      <!-- Add other table cells as needed -->
+    </tr>
+  </tbody>
+</table>

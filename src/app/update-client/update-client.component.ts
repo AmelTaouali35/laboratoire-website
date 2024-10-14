@@ -11,7 +11,6 @@ export class UpdateClientComponent implements OnInit {
 
   ngOnInit() {}
   logout() {
-    // Redirige vers la page de connexion lorsque le bouton de déconnexion est cliqué
-    this.router.navigate(["/login"]); // Assurez-vous que '/login' est la route correcte vers votre page de connexion
+    this.router.navigate(["/login"]);
   }
 }

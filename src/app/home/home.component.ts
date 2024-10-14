@@ -1,5 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import Swiper from "swiper";
+import { User } from "../user";
+import { CompteuserService } from "../compteuser.service";
 
 @Component({
   selector: "app-home",
@@ -7,11 +10,13 @@ import { Router } from "@angular/router";
   styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit {
-  constructor(private router: Router) {}
+  user: User | undefined;
 
-  ngOnInit() {}
-  logout() {
-    // Redirige vers la page de connexion lorsque le bouton de déconnexion est cliqué
-    this.router.navigate(["/login"]); // Assurez-vous que '/login' est la route correcte vers votre page de connexion
+  constructor(private compteuserService: CompteuserService) {}
+
+  ngOnInit(): void {
+    this.compteuserService.currentUser.subscribe((user) => {
+      this.user = user;
+    });
   }
 }

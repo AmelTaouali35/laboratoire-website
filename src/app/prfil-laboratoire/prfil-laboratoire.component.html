@@ -1,0 +1,39 @@
+<div class="component">
+  <div id="wrapper">
+    <app-sidebar></app-sidebar>
+    <div class="keep">
+      <div class="wrapper">
+        <h2>Mon Compte</h2>
+        <div class="input-box" *ngIf="laboratoire">
+          <label for="email">E-mail:</label>
+          <input
+            type="email"
+            id="email"
+            [(ngModel)]="laboratoire.email"
+            class="form-control"
+            placeholder="email@gmail.com"
+            readonly
+          />
+          <label for="designation">Designation:</label>
+          <input
+            type="text"
+            id="designation"
+            [(ngModel)]="laboratoire.designation"
+            class="form-control"
+            placeholder="Laboratoire Designation"
+            readonly
+          />
+          <label for="code">Code:</label>
+          <input
+            type="text"
+            id="code"
+            [(ngModel)]="laboratoire.code"
+            class="form-control"
+            placeholder="Laboratoire Code"
+            readonly
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

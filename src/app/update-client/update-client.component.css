@@ -91,32 +91,6 @@ input{outline: none;
     display: inline-block; /* Affiche les mots sur la même ligne */
   }
 
-
-  .form-control.with-icon.icon1 {
-    background-image: url('src/assets/user.png');
-    background-size: 20px 20px;
-    background-position: 10px center;
-    background-repeat: no-repeat;
-    padding-left: 40px;
-  }
-
-  .form-control.with-icon.icon2 {
-    background-image: url('src/assets/bloc.png');
-    background-size: 20px 18px;
-    background-position: 10px center;
-    background-repeat: no-repeat;
-    padding-left: 40px;
-  }
-
-  .form-control.with-icon.icon3 {
-    background-image: url('src/assets/vers.png');
-
-    background-size: 20px 20px;
-    background-position: 10px center;
-    background-repeat: no-repeat;
-    padding-left: 40px;
-  }
-
 /*header*/
 .navbar {
   background-color: #0078B8;

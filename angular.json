@@ -25,10 +25,16 @@
             ],
             "styles": [
               "src/styles.css",
+              "src/assets/design/vendor/fontawesome-free/css/all.min.css",
+              "src/assets/design/css/sb-admin-2.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-
-            "scripts": []
+            "scripts": [
+              "src/assets/design/vendor/jquery/jquery.min.js",
+              "src/assets/design/vendor/bootstrap/js/bootstrap.bundle.min.js",
+              "src/assets/design/vendor/jquery-easing/jquery.easing.min.js",
+              "src/assets/design/js/sb-admin-2.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -117,6 +123,7 @@
           }
         }
       }
-    }},
-  "defaultProject": "amel"
+    }
+  },
+  "defaultProject": "medicis"
 }

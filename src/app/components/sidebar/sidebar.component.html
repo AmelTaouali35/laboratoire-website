@@ -1,0 +1,146 @@
+<ul
+  class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion fixed-left"
+  id="accordionSidebar"
+  style="position: relative"
+>
+  <!-- Navbar content -->
+
+  <!-- Navbar content -->
+
+  <!-- Sidebar - Brand -->
+  <a class="" href="/Home">
+    <div class="sidebar-brand-icon">
+      <img
+        src="/assets/medi.png"
+        width="200"
+        height="140"
+        class="d-inline-block align-top"
+        alt=""
+      />
+    </div>
+  </a>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider my-0" />
+
+  <!-- Nav Item - Dashboard -->
+
+  <!-- Divider -->
+  <hr class="sidebar-divider" />
+
+  <!-- Heading -->
+  <div class="sidebar-heading">Interface</div>
+
+  <!-- Your Navigation Menu -->
+  <li class="nav-item" *ngIf="role == 'ROLE_ADMIN'">
+    <a class="nav-link" routerLink="/Home">
+      <i class="fas fa-users"></i>
+      <span> Home</span>
+    </a>
+  </li>
+  <li class="nav-item" *ngIf="role == 'ROLE_LABORATOIRE'">
+    <a class="nav-link" routerLink="/Home">
+      <i class="fas fa-users"></i>
+      <span> Home</span>
+    </a>
+  </li>
+  <li class="nav-item" *ngIf="role == 'ROLE_RESPONSABLE'">
+    <a class="nav-link" routerLink="/Home">
+      <i class="fas fa-users"></i>
+      <span> Home</span>
+    </a>
+  </li>
+  <li class="nav-item" *ngIf="role == 'ROLE_RESPONSABLE'">
+    <a class="nav-link" routerLink="/profile/:id">
+      <i class="fas fa-users"></i>
+      <span> My Account</span>
+    </a>
+  </li>
+  <li class="nav-item" *ngIf="role == 'ROLE_ADMIN'">
+    <a class="nav-link" routerLink="/profile/:id">
+      <i class="fas fa-users"></i>
+      <span> My Account</span>
+    </a>
+  </li>
+  <li class="nav-item" *ngIf="role == 'ROLE_LABORATOIRE'">
+    <a class="nav-link" routerLink="/profilelab/:id">
+      <i class="fas fa-users"></i>
+      <span> My Account</span>
+    </a>
+  </li>
+  <!-- Your Navigation Menu -->
+
+  <li class="nav-item" *ngIf="role == 'ROLE_ADMIN'">
+    <a class="nav-link" routerLink="/clients">
+      <i class="fas fa-users"></i>
+      <span>Responsable List</span>
+    </a>
+  </li>
+
+  <li class="nav-item" *ngIf="role == 'ROLE_LABORATOIRE'">
+    <a class="nav-link" routerLink="/laboratoire/products">
+      <i class="fas fa-users"></i>
+      <span>Product Data </span>
+    </a>
+  </li>
+
+  <li class="nav-item" *ngIf="role == 'ROLE_ADMIN'">
+    <a class="nav-link" routerLink="/clientLaboratoire">
+      <i class="fas fa-users"></i>
+      <span>Laboratoire List</span>
+    </a>
+  </li>
+  <li class="nav-item" *ngIf="role == 'ROLE_RESPONSABLE'">
+    <a class="nav-link" routerLink="/ResLaboratoiteListe">
+      <i class="fas fa-users"></i>
+      <span>Laboratoire List</span>
+    </a>
+  </li>
+
+  <li class="nav-item" *ngIf="role == 'ROLE_ADMIN'">
+    <a class="nav-link" routerLink="/signup">
+      <i class="fas fa-user-plus"></i>
+      <span>New Responsable</span>
+    </a>
+  </li>
+  <li class="nav-item" *ngIf="role == 'ROLE_ADMIN'">
+    <a class="nav-link" routerLink="/laboratoire">
+      <i class="fas fa-flask"></i>
+      <span>New Laboratoire</span>
+    </a>
+  </li>
+  <li class="nav-item" *ngIf="role == 'ROLE_ADMIN'">
+    <a class="nav-link" routerLink="/LaboratoirelisteComponent">
+      <i class="fas fa-list"></i>
+      <span>Consult laboratoire</span>
+    </a>
+  </li>
+  <li class="nav-item" *ngIf="role == 'ROLE_RESPONSABLE'">
+    <a class="nav-link" routerLink="/LaboratoirelisteComponent">
+      <i class="fas fa-list"></i>
+      <span>Consult laboratoire</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      routerLink="/data"
+      *ngIf="role == 'ROLE_ADMIN' || role == 'ROLE_RESPONSABLE'"
+    >
+      <i class="fas fa-cogs"></i>
+      <span>laboratoire products</span>
+    </a>
+  </li>
+  <li class="nav-item ml-auto">
+    <button class="btn btn-link nav-link" (click)="logout()">
+      <i class="fas fa-sign-out-alt"></i>
+      <span>Log out</span>
+    </button>
+  </li>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider d-none d-md-block" />
+
+  <!-- Divider -->
+  <hr class="sidebar-divider" />
+</ul>

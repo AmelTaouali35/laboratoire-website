@@ -1,18 +1,20 @@
-<div class="back">
-  <div class="wrapper">
-    <div class="main-content">
-      <nav class="navbar">
-        <ul>
-          <li><a routerLink="/Home">Accueil</a></li>
-          <li><a routerLink="/clients">Liste des utilisateurs</a></li>
-          <li><a routerLink="/signup">nouveaux utilisateur</a></li>
-          <li><a routerLink="/laboratoire">nouveaux laboratoire</a></li>
-          <li><a routerLink="/signup">liste des laboratoires</a></li>
-          <li><a routerLink="/signup">nouveaux produits</a></li>
-          <li><a routerLink="/signup">liste des produits</a></li>
-        </ul>
-        <button class="logout-btn" (click)="logout()">Déconnexion</button>
-      </nav>
+<div class="component">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="video-container">
+    <div id="content-wrapper" class="d-flex flex-column">
+      <!-- Main Content -->
+      <div id="content">
+        <!-- Topbar -->
+        <app-header></app-header>
+        <!-- End of Topbar -->
+        <video autoplay muted loop class="video-background">
+          <source src="/assets/1.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
   </div>
 </div>

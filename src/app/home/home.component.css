@@ -1,81 +1,19 @@
-.navbar {
-  background-color: #0078B8;
-  border-radius: 4px;
-  box-shadow: 0 1px 20px 0 #14203E;
-  padding: 0.5rem 1rem;
+.component {
+  height: 100%;
+
   display: flex;
-  align-items: center; /* Centrer verticalement les éléments dans la navbar */
+  flex-direction: row; /* Aligne les éléments horizontalement */
 }
 
-.navbar ul {
-  flex-grow: 1; /* Fait en sorte que la liste prenne tout l'espace disponible */
-  display: flex;
-  justify-content: center; /* Centrer horizontalement les éléments dans la liste */
+
+.video-container {
+
+  flex: 1; /* Laisse la vidéo prendre tout l'espace restant */
+ /* Assure que la vidéo est positionnée correctement */
 }
 
-.navbar ul li {
-  margin: 0 10px; /* Ajoute un espace autour de chaque élément de liste */
+.video-background {
+  width: 101%; /* Assure que la vidéo couvre toute la largeur */
+ margin-top: -20px;
+ background-size:cover;
 }
-
-.logo img {
-  width: 100px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li a {
-  color: rgba(245, 245, 245, 0.842);
-  text-decoration: none;
-}
-
-.main-content {
-  flex: 1;
-  padding: 20px;
-}
-
-.wrapper .navbar-icon img {
-  width: 20px; /* Réduire la taille de l'icône du compte */
-  height: 20px;
-  margin-right: 10px;
-}
-
-.logout-btn {
-  background-color: whitesmoke;
-  color: #0078B8;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-:host {
-  background-color: #EBF2FA;
-  background-image: url("src/assets/Dashboard Login.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;/* Correction de la syntaxe de l'image de fond */
-  display: block; /* Assure que l'élément racine du composant est affiché en tant que bloc */
-  min-height: 100vh; /* Assure que le composant occupe au moins la hauteur de l'écran */
-}
-
-img{
-  text-align: left;
-}
-
-	.titre {
-		--color:#284E7B ;
-		font-family: Impact, 'Anton', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-		font-style: italic;
-padding-top: 180px;
-    font-size: 50px;
-		color: var(--color);
-		letter-spacing: -.005em;
-text-align: center;
-
-
-	}
-
-

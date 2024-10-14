@@ -1,55 +1,66 @@
-<div class="back">
-  <div class="wrapper">
-    <div class="main-content">
-      <nav class="navbar">
-        <ul>
-          <li><a routerLink="/Home">Accueil</a></li>
-          <li><a routerLink="/clients">Liste des utilisateurs</a></li>
-          <li><a routerLink="/signup">nouveaux utilisateur</a></li>
-          <li><a routerLink="/laboratoire">nouveaux laboratoire</a></li>
-          <li><a routerLink="/signup">liste des laboratoires</a></li>
-          <li><a routerLink="/signup">nouveaux produits</a></li>
-          <li><a routerLink="/signup">liste des produits</a></li>
-        </ul>
-        <button class="logout-btn" (click)="logout()">Déconnexion</button>
-      </nav>
+<body style="background-color: #f6f5f2">
+  <div class="component">
+    <div id="wrapper">
+      <app-sidebar></app-sidebar>
+      <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+          <app-header></app-header>
+          <div class="keep">
+            <div class="wrapper">
+              <h2>nouveau laboratoire</h2>
+              <form class="form-group" (submit)="createLab()">
+                <div class="input-box">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="code"
+                    name="code"
+                    [(ngModel)]="code"
+                    required
+                    placeholder="code de laboratoire"
+                  />
+                </div>
+                <div class="input-box">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="designation"
+                    name="designation"
+                    [(ngModel)]="designation"
+                    required
+                    placeholder="designation de laboratoire"
+                  />
+                </div>
+                <div class="input-box">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    [(ngModel)]="email"
+                    required
+                    placeholder="email@gmail.com/fr"
+                  />
+                </div>
+                <div class="input-box">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    [(ngModel)]="password"
+                    required
+                    placeholder="mot de passe"
+                  />
+                </div>
+                <div class="col-12 mb-3 text-center">
+                  <button type="submit" class="btn btn-primary">ajouter</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-
-<div class="container">
-  <div class="formulaire">
-    <h1 class="text-center">compte laboratoire</h1>
-  </div>
-  <form>
-    <div class="form-group">
-      <div class="col-md-6">
-        <div class="form__field">
-          <input type="text" id="code" name="code" required />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        <div class="form__field">
-          <input type="text" id="designation" name="designation" required />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        <div class="form__field">
-          <input type="email" id="mail" name="mail" required />
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="form-group">
-        <div class="form__field">
-          <input type="password" id="password" name="password" required />
-        </div>
-      </div>
-    </div>
-    <button type="submit">Soumettre</button>
-  </form>
-</div>
+</body>

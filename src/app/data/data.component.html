@@ -1,0 +1,68 @@
+<body>
+  <div class="component">
+    <!-- Page Wrapper -->
+
+    <div id="wrapper">
+      <app-sidebar></app-sidebar>
+
+      <!-- End of Sidebar -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+
+          <!-- Topbar Navbar -->
+          <app-header></app-header>
+
+          <!-- Content Wrapper -->
+          <div class="keep">
+            <div class="wrapper">
+              <h2 class="card-title" style="margin-bottom: 50px">
+                Laboratoire Produits
+              </h2>
+              <div class="form-group">
+                <div class="input-box">
+                  <label for="selectLaboratoire"
+                    >Sélectionnez un laboratoire :</label
+                  >
+
+                  <select
+                    class="form-control"
+                    id="selectLaboratoire"
+                    [(ngModel)]="selectedLaboratoireCode"
+                  >
+                    <option
+                      *ngFor="let laboratoire of laboratoires"
+                      [value]="laboratoire.code"
+                    >
+                      {{ laboratoire.code }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <div class="col-12 d-flex justify-content-center">
+                  <label class="btn btn-success btn-sm">
+                    Produits
+                    <input
+                      type="file"
+                      name="fichierExcel"
+                      accept=".xlsx,.xls"
+                      (change)="onFileSelected($event)"
+                      style="display: none"
+                      #fileInput
+                    />
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+      </div>
+    </div>
+  </div>
+</body>

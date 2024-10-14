@@ -1,0 +1,77 @@
+<body id="page-top">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <app-sidebar></app-sidebar>
+
+    <!-- End of Sidebar -->
+
+    <div class="col-lg-10 grid-margin stretch-card">
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+
+          <!-- Topbar Navbar -->
+          <app-header></app-header>
+
+          <div class="card">
+            <div class="card-body" style="padding-top: 20px">
+              <h4 class="card-title" style="margin-bottom: -23px">
+                Laboratoires
+              </h4>
+              <div class="table-responsive">
+                <table class="table table-striped" style="width: auto">
+                  <!-- Set table width to auto -->
+                  <thead>
+                    <tr>
+                      <!-- Reduced width -->
+                      <th style="width: 5%">code</th>
+                      <!-- Reduced width -->
+                      <th style="width: 5%">designation</th>
+                      <!-- Reduced width -->
+                      <th style="width: 5%">email</th>
+                      <!-- Reduced width -->
+                      <th style="width: 5%">Role</th>
+                      <!-- Reduced width -->
+                      <th style="width: 5%">Action</th>
+                      <!-- Reduced width -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let laboratoire of laboratoires">
+                      <td>{{ laboratoire.code }}</td>
+                      <td>{{ laboratoire.designation }}</td>
+                      <td>{{ laboratoire.email }}</td>
+                      <td>{{ laboratoire.role }}</td>
+                      <td>
+                        <div class="button-group">
+                          <a
+                            class="btn btn-success btn-sm"
+                            (click)="
+                              updateLaboratoire(
+                                laboratoire.id,
+                                laboratoire.role
+                              )
+                            "
+                            >Edit</a
+                          >
+                          <button
+                            class="btn btn-danger btn-sm"
+                            (click)="deleteLaboratoire(laboratoire.id)"
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,61 @@
+<body>
+  <div class="component">
+    <!-- Page Wrapper -->
+
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <app-sidebar></app-sidebar>
+
+      <!-- End of Sidebar -->
+      <!-- Content Wrapper -->
+
+      <div class="keep">
+        <div *ngIf="successMessage" class="alert alert-success">
+          {{ successMessage }}
+        </div>
+        <div *ngIf="errorMessage" class="alert alert-danger">
+          {{ errorMessage }}
+        </div>
+        <div class="wrapper">
+          <!-- Added text-center class -->
+          <h3>Responsable</h3>
+          <!-- Title is now centered -->
+
+          <form class="form-group" (submit)="submitForm()">
+            <label style="color: blue">email</label>
+
+            <div class="input-box">
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="email"
+                required
+                [(ngModel)]="selectedResponsable.email"
+              />
+            </div>
+            <label style="color: blue">mot de passe</label>
+
+            <div class="input-box">
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="password"
+                required
+                [(ngModel)]="selectedResponsable.password"
+              />
+            </div>
+
+            <div class="col-12 d-flex justify-content-center">
+              <!-- Center the button -->
+              <button type="submit" class="btn btn-primary">
+                Mise a jours
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,44 +1,83 @@
-<div class="background">
+<body style="background-color: #0e46a3">
   <div class="container">
-    <div class="mo">
-      <div class="col-md-6">
-        <div class="title">
-          <div class="formulaire">
-            <h1 class="text-center">Login</h1>
-          </div>
-          <form class="form-group" (ngSubmit)="userLogin()">
-            <div class="form-group">
-              <div class="form__field">
-                <label for="email" class="form-label"></label>
-                <input
-                  type="email"
-                  [(ngModel)]="user.userId"
-                  class="form-control with-icon icon1"
-                  id="userId"
-                  placeholder="Entrez votre adresse"
-                  name="userId"
-                  required=""
+    <!-- Outer Row -->
+    <div
+      class="row justify-content-center align-items-center"
+      style="height: 100vh"
+    >
+      <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+          <div class="row no-gutters">
+            <!-- Image column -->
+
+            <div class="col-lg-4" style="margin-left: -12px">
+              <div>
+                <img
+                  src="/assets/medi.png"
+                  alt="Image"
+                  style="
+                    margin-left: 70px;
+                    margin-top: 20px;
+
+                    height: 300px;
+                  "
                 />
               </div>
-              <div class="form-group">
-                <div class="form__field">
-                  <label for="pwd" class="form-label"> </label>
-                  <input
-                    type="password"
-                    [(ngModel)]="user.password"
-                    class="form-control with-icon icon2"
-                    id="password"
-                    placeholder="Entrez votre mot de passe "
-                    name="password"
-                    required=""
-                  />
+            </div>
+
+            <!-- Content column -->
+            <div class="col-lg-8">
+              <div class="p-4">
+                <div class="title text-center">
+                  <div class="formulaire">
+                    <h1 class="h4 text-gray-900 mb-4">Log In</h1>
+                  </div>
                 </div>
-                <button type="submit">Login</button>
+                <form class="user" (ngSubmit)="Login()">
+                  <div class="form-group">
+                    <div class="form__field">
+                      <input
+                        type="email"
+                        [(ngModel)]="request.email"
+                        class="form-control form-control-user with-icon icon1"
+                        id="userId"
+                        placeholder="Enter Email Address..."
+                        name="userId"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form__field">
+                      <input
+                        type="password"
+                        [(ngModel)]="request.password"
+                        class="form-control form-control-user with-icon icon2"
+                        id="password"
+                        placeholder="Password"
+                        name="password"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-user btn-block"
+                  >
+                    Connexion
+                  </button>
+                </form>
+                <hr />
+                <div class="text-center">
+                  <a class="small" href="/forgotpassword"
+                    >Mot de Passe Oublier?</a
+                  >
+                </div>
               </div>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</body>

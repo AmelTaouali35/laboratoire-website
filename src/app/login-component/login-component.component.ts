@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { User } from "../user";
-import { LoginService } from "../login.service";
 import { Router } from "@angular/router";
+import { LoginService } from "../login.service";
+import { AuthenticationRequest } from "../models/authentication-request";
 
 @Component({
   selector: "app-login-component",
@@ -9,31 +9,37 @@ import { Router } from "@angular/router";
   styleUrls: ["./login-component.component.css"],
 })
 export class LoginComponentComponent implements OnInit {
-  user: User = new User();
+  request: AuthenticationRequest = new AuthenticationRequest();
   errorMessage: string = "";
 
   constructor(private loginService: LoginService, private router: Router) {}
 
-  ngOnInit(): void {}
-
-  userLogin() {
-    console.log(this.user);
-    if (!this.user.userId || !this.user.password) {
-      this.errorMessage = "Please enter both username and password.";
+  ngOnInit(): void {
+    localStorage.clear();
+  }
+  Login() {
+    if (!this.request.email || !this.request.password) {
+      alert("Formulaire incorrect: Veuillez remplir tous les champs.");
       return;
     }
 
-    this.loginService.loginUser(this.user).subscribe(
-      (data: any) => {
-        if (data.role === "admin") {
-          this.router.navigate(["/Home"]);
-        } else if (data.role === "client") {
-        } else if (data.role === "responsible") {
-        }
+    this.loginService.loginUser(this.request).subscribe(
+      (res) => {
+        alert("Connexion réussie!");
+        localStorage.setItem("token", res.token);
+        localStorage.setItem("role", res.role);
+        localStorage.setItem("id", "" + res.id);
+        this.router.navigate(["Home"]);
       },
       (error) => {
-        alert("Invalid username or password.");
-        this.errorMessage = "Invalid username or password.";
+        console.error(error);
+        let errorMessage = "Adresse mail ou mot de passe incorect!.";
+
+        if (error.error) {
+          errorMessage = error.error.message || errorMessage;
+        }
+
+        alert(errorMessage);
       }
     );
   }

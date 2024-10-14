@@ -1,0 +1,71 @@
+<body style="background-color: #f6f5f2">
+  <div class="component">
+    <!-- Page Wrapper -->
+
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <!-- Sidebar -->
+      <app-sidebar></app-sidebar>
+
+      <!-- End of Sidebar -->
+      <div class="col-lg-10 grid-margin stretch-card">
+        <div class="card" style="margin-top: 70px">
+          <div style="padding-top: 20px">
+            <h4
+              class="card-title"
+              style="margin-bottom: -23px; margin-left: 30px"
+            >
+              Laboratoires
+            </h4>
+            <div class="table-responsive">
+              <table
+                class="table table-striped"
+                style="width: auto; margin-left: 30px; margin-right: 30px"
+              >
+                <thead>
+                  <tr>
+                    <th style="width: 5%">Code</th>
+                    <th style="width: 5%">Libelle</th>
+                    <th style="width: 5%">Stockresoff</th>
+                    <th style="width: 5%">Cm</th>
+                    <th style="width: 5%">Mois</th>
+                    <th style="width: 5%">Venteresoff</th>
+                    <th style="width: 5%">Stockdepreg</th>
+                    <th style="width: 5%">Ventedepreg</th>
+                    <th style="width: 5%">Entree</th>
+                    <th style="width: 5%">Reception</th>
+                    <th style="width: 5%">Sdouane</th>
+                    <th style="width: 5%">Annocee</th>
+                    <th style="width: 5%">Soldecde</th>
+                    <th style="width: 5%">Encours</th>
+                    <th style="width: 10%">Etat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let product of products">
+                    <td>{{ product.code }}</td>
+                    <td>{{ product.libelle }}</td>
+                    <td>{{ product.stockresoff }}</td>
+                    <td>{{ product.cm }}</td>
+                    <td>{{ product.mois }}</td>
+                    <td>{{ product.venteresoff }}</td>
+                    <td>{{ product.stockdepreg }}</td>
+                    <td>{{ product.ventedepreg }}</td>
+                    <td>{{ product.entree }}</td>
+                    <td>{{ product.reception }}</td>
+                    <td>{{ product.sdouane }}</td>
+                    <td>{{ product.annocee }}</td>
+                    <td>{{ product.soldecde }}</td>
+                    <td>{{ product.encours }}</td>
+
+                    <td>{{ product.etat }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
